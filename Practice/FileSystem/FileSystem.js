@@ -37,3 +37,9 @@ fs.readFile("Temp/temp.txt", "utf-8", (err, data) => {
   if (!err) console.log(data);
   else console.log(err);
 });
+
+// 5.  Delete File
+
+fs.unlink("Temp/temp.txt", (err) => {
+  if (!err) console.log("File Deleted Successfully");
+});
