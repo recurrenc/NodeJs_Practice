@@ -1,5 +1,4 @@
 const fs = require("fs");
-const { fileURLToPath } = require("url");
 
 // CURD operataion in File System
 
@@ -29,5 +28,12 @@ const updatedData = "This is updated Data";
 
 fs.appendFile("Temp/temp.txt", updatedData, (err) => {
   if (!err) console.log("Data Appended Successfully");
+  else console.log(err);
+});
+
+// 4.  Read File's Data
+
+fs.readFile("Temp/temp.txt", "utf-8", (err, data) => {
+  if (!err) console.log(data);
   else console.log(err);
 });
