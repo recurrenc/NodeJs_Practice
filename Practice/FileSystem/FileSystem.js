@@ -43,3 +43,9 @@ fs.readFile("Temp/temp.txt", "utf-8", (err, data) => {
 fs.unlink("Temp/temp.txt", (err) => {
   if (!err) console.log("File Deleted Successfully");
 });
+
+// 6.  Delete a Directory
+
+fs.rmdir("Temp", (err) => {
+  if (!err) console.log("Folder Deleted Successfully");
+});
